@@ -1,6 +1,6 @@
 {
   "name": "pm2-meteor",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "bin": "lib/program.js",
   "description": "Simplest way to deploy, scale and run Meteor Apps with PM2.",
   "main": "lib/pm2-meteor.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/andruschka/pm2-meteor.git"
+    "url": "https://github.com/goodideal/pm2-meteor.git"
   },
   "keywords": [
     "pm2",
