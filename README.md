@@ -1,3 +1,6 @@
+# Modification announcement
+Since Meteor 1.4.2 add --unsafe-perm when build by root user, add this parameter when running build.
+
 # pm2-meteor
 A CLI tool, that will deploy your Meteor app (from your dev machine or from git) as Nodejs bundle and run it with PM2. (tested with Ubuntu and Freebsd hosts)
 
