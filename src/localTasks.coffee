@@ -77,7 +77,7 @@ module.exports =
     buildScript = ""
     if pm2mConf.prebuildScript and pm2mConf.prebuildScript.trim() isnt ""
       buildScript  += "cd #{abs(pm2mConf.appLocation.local)} && #{pm2mConf.prebuildScript} && "
-    buildScript += "cd #{abs(pm2mConf.appLocation.local)} && meteor build #{pm2mConf.meteorBuildFlags} --directory #{CWD} --unsafe-perm"
+    buildScript += "cd #{abs(pm2mConf.appLocation.local)} && meteor --unsafe-perm build #{pm2mConf.meteorBuildFlags} --directory #{CWD}"
     exec buildScript, (err, stdout, stderr)->
       if err
         done err
@@ -99,7 +99,7 @@ module.exports =
           buildScript = "cd #{path.join CWD, _settings.gitDirName} "
           if pm2mConf.prebuildScript and pm2mConf.prebuildScript.trim() isnt ""
             buildScript  += "&& #{pm2mConf.prebuildScript} "
-          buildScript  += "&& meteor build #{pm2mConf.meteorBuildFlags} --directory #{CWD} --unsafe-perm"
+          buildScript  += "&& meteor --unsafe-perm build #{pm2mConf.meteorBuildFlags} --directory #{CWD}"
           exec buildScript, (err, sdout, stderr)->
             if err
               done err
